@@ -109,7 +109,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+FORCE_SCRIPT_NAME = '/taski'
+STATIC_URL = '/taski/static/'
 
 # STATIC_ROOT = BASE_DIR / 'collected_static'
 STATIC_ROOT = BASE_DIR / 'collected_static'

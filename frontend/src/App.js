@@ -19,7 +19,7 @@ const App = () => {
 
   const refreshList = () => {
     axios
-      .get("/api/tasks/")
+      .get("/taski/api/tasks/")
       .then((res) => setTaskList(res.data))
       .catch(console.error);
   };
@@ -30,8 +30,8 @@ const App = () => {
 
   const handleSubmit = (item) => {
     const request = item.id
-      ? axios.put(`/api/tasks/${item.id}/`, item)
-      : axios.post("/api/tasks/", item);
+      ? axios.put(`/taski/api/tasks/${item.id}/`, item)
+      : axios.post("/taski/api/tasks/", item);
 
     request
       .then((res) => {
@@ -43,7 +43,7 @@ const App = () => {
 
   const handleDelete = (item) => {
     axios
-      .delete(`/api/tasks/${item.id}/`)
+      .delete(`/taski/api/tasks/${item.id}/`)
       .then(refreshList)
       .catch(console.error);
   };

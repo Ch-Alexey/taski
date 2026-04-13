@@ -25,3 +25,5 @@ COPY . .
 
 # При старте контейнера запустить сервер разработки.
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
+
+# CMD ["sh", "-c", "python manage.py collectstatic --no-input && gunicorn --bind 0.0.0.0:8000 backend.wsgi"]
